@@ -351,12 +351,9 @@ a{
 }
 .home-wrapper{
 	.banner{
-		/*overflow: hidden;*/
 		position: relative;
 		.banner-wrapper{
-			/*float: left;*/
 			width: 200%;
-			/*height: 607px;*/
 
 			li{
 			    width: 50%;
@@ -415,8 +412,15 @@ a{
 	    float: left;
 	    width: 100%;
 		display: inline-block;
-		img{
+		overflow: hidden;
+		
+		img.cbig{
 			@extend %homeimg;
+		    transition: all 0.1s ease-out;
+		    transform: scale(1,1);
+			&:hover{
+				transform: scale(1.2,1.2);
+			}
 		}
 	}
 	.con-left{
@@ -425,8 +429,14 @@ a{
 	    height: 100%;
 	    display: inline-block;
         vertical-align: bottom;
+		overflow: hidden;
         img{
         	@extend %homeimg;
+		    transition: all 0.1s ease-out;
+		    transform: scale(1,1);
+			&:hover{
+				transform: scale(1.2,1.2);
+			}
         }
 	}
 }
@@ -556,12 +566,15 @@ a{
 			    display: block;
 			    color: #333;
 			    font-size: 14px;
-
+			    
 			    img{
 			    	display: block;
 			    	width: 138px;
 			    	height: 138px;
 			    	transition: all 0.3s ease;
+			    	&:hover{
+			    		transform: translateX(20px);
+			    	}
 			    }
 		    }
 		}
@@ -591,6 +604,12 @@ a{
 			    a{
 			    	width: 201px;
     				height: 230px;
+    				img{
+    					transition: all 0.3s ease;
+				    	&:hover{
+				    		transform: translateX(20px);
+				    	}
+    				}
 			    }
 			}
 			li.goods-sec{

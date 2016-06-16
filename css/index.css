@@ -354,14 +354,11 @@ a {
 }
 
 .home-wrapper .banner {
-  /*overflow: hidden;*/
   position: relative;
 }
 
 .home-wrapper .banner .banner-wrapper {
-  /*float: left;*/
   width: 200%;
-  /*height: 607px;*/
 }
 
 .home-wrapper .banner .banner-wrapper li {
@@ -407,7 +404,7 @@ a {
   cursor: pointer;
 }
 
-.home-wrapper .con-up img, .home-wrapper .con-left img {
+.home-wrapper .con-up img.cbig, .home-wrapper .con-left img {
   width: 100%;
   display: block;
 }
@@ -416,6 +413,16 @@ a {
   float: left;
   width: 100%;
   display: inline-block;
+  overflow: hidden;
+}
+
+.home-wrapper .con-up img.cbig {
+  transition: all 0.1s ease-out;
+  transform: scale(1, 1);
+}
+
+.home-wrapper .con-up img.cbig:hover {
+  transform: scale(1.2, 1.2);
 }
 
 .home-wrapper .con-left {
@@ -424,6 +431,16 @@ a {
   height: 100%;
   display: inline-block;
   vertical-align: bottom;
+  overflow: hidden;
+}
+
+.home-wrapper .con-left img {
+  transition: all 0.1s ease-out;
+  transform: scale(1, 1);
+}
+
+.home-wrapper .con-left img:hover {
+  transform: scale(1.2, 1.2);
 }
 
 .home-article-wrapper {
@@ -568,6 +585,10 @@ a {
   transition: all 0.3s ease;
 }
 
+.home-wrapper .goods-block li a img:hover {
+  transform: translateX(20px);
+}
+
 @media screen and (max-width: 980px) {
   .home-wrapper .goods-block {
     width: 955px;
@@ -591,6 +612,12 @@ a {
   .home-wrapper .goods-block li a {
     width: 201px;
     height: 230px;
+  }
+  .home-wrapper .goods-block li a img {
+    transition: all 0.3s ease;
+  }
+  .home-wrapper .goods-block li a img:hover {
+    transform: translateX(20px);
   }
   .home-wrapper .goods-block li.goods-sec {
     width: 235px;
